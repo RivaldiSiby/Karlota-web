@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.top-config-nav{
+    padding-top:150px;
+}
+// font add
+@font-face {
+    font-family: "Lato";
+    src: 
+      url("../../fonts/Lato/Lato-Bold.woff2") format("woff2"),
+      /* Super Modern Browsers */ 
+      url("../../fonts/Lato/Lato-Bold.woff") format("woff"),
+      /* Pretty Modern Browsers */ 
+      url("../../fonts/Lato/Lato-Bold.ttf") format("truetype"); 
+      /* Safari, Android, iOS */
+  }
+
+@font-face {
+    font-family: "Roboto";
+    src: 
+      url("../../fonts/Roboto/Roboto-Regular.woff2") format("woff2"),
+      /* Super Modern Browsers */ 
+      url("../../fonts/Roboto/Roboto-Regular.woff") format("woff"),
+      /* Pretty Modern Browsers */ 
+      url("../../fonts/Roboto/Roboto-Regular.ttf") format("truetype"); 
+      /* Safari, Android, iOS */
+  }

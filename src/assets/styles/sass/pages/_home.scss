@@ -1,0 +1,27 @@
+@use "../layout/var";
+
+.main-body{
+    height:auto;
+    .img-box{
+        margin-top:50px; 
+    }
+    .info-box{
+        margin-top:50px;
+        h1{
+            font-family: var.$headerFont;
+            font-size: 35px;
+            color:var.$primary1; 
+            span{
+                color:var.$secondary1; 
+            }
+        }
+        p{
+            padding-top: 20px;
+            padding-bottom: 20px;
+            letter-spacing: 2px;
+            font-family: var.$textFont;
+            font-size: 18px;
+            color:var.$primaryText1;
+        }
+    }
+}   

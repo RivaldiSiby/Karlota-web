@@ -1,0 +1,8 @@
+// main config
+@use "./config";
+
+// layout
+@use "./layout/layout";
+//page
+@use "./pages/home";
+@use "./pages/auth";

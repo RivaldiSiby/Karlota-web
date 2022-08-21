@@ -1,0 +1,69 @@
+@use "../layout/var";
+
+.main-auth{
+    min-height:100vh;
+    width:100%;
+    .box-row{
+        padding:0;
+        margin:0;
+        overflow-x: hidden;
+    }
+    .left-auth{
+        padding:0;
+        background:url("../../../img/bg-auth.jpg");
+        background-size: cover;
+        background-position: center center;
+        height:100vh;
+        section{
+            width:100%;
+            height:100%;
+            background-color:#3d085aa4;
+            h2{
+                text-align: center;
+                color:white;
+                font-weight: bold;
+                font-size:70px;
+                font-family: var.$headerFont;
+                padding:0 15%;
+                text-shadow: 0 0 10px var.$primary1
+            }
+        }
+    }
+    .right-auth{      
+        padding:0;
+        background-color: var.$primary1;
+        height:100vh;
+        .form-auth{
+            width:70%;
+           section{
+            img{
+                width:50%;
+                margin:0 auto;
+                margin-bottom:50px;
+            }
+            h2{
+                color:var.$primaryText2;
+                font-weight: bold;
+                font-size:50px;
+                font-family: var.$headerFont;
+                text-shadow: 0 0 10px var.$primary1
+            }
+           }
+            .input-auth{
+                height:60px;
+                background-color: var.$primary2;
+                border:none;
+                font-size: 16px;
+                margin:10px 0;
+                color:var.$primaryText2;
+                font-weight: 400;
+                &::placeholder{
+                    color:var.$primaryText2;
+                }
+                span{
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
