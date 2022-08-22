@@ -2,6 +2,7 @@
 
 .main-auth{
     min-height:100vh;
+    height:auto;
     width:100%;
     .box-row{
         padding:0;
@@ -32,7 +33,7 @@
     .right-auth{      
         padding:0;
         background-color: var.$primary1;
-        height:100vh;
+        min-height:100vh;
         .form-auth{
             width:70%;
            section{
@@ -42,7 +43,7 @@
                 margin-bottom:50px;
             }
             h2{
-                color:var.$primaryText2;
+                color:white;
                 font-weight: bold;
                 font-size:50px;
                 font-family: var.$headerFont;
