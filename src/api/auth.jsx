@@ -11,8 +11,9 @@ auth.register = async (data) => {
   }
 };
 
-auth.login = async (data) => {
+auth.login = async (user) => {
   try {
+    const data = { ...user, device: "web" };
     const result = await axios.post(
       `${process.env.REACT_APP_API}auth/login`,
       data

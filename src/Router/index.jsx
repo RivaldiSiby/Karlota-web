@@ -6,6 +6,7 @@ import { Provider as ReduxProvider } from "react-redux";
 import { store, persistor } from "../redux/store";
 import { PersistGate } from "redux-persist/integration/react";
 import Register from "../pages/Auth/Register";
+import Dashboard from "../pages/User/Dashboard";
 
 function Router() {
   return (
@@ -19,6 +20,9 @@ function Router() {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               {/* public route */}
+              {/* user route */}
+              <Route path="/dashboard" element={<Dashboard />} />
+              {/* user route */}
             </Routes>
           </BrowserRouter>
         </PersistGate>

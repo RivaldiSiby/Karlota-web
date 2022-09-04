@@ -9,7 +9,7 @@ import {
   AiOutlineLock,
   AiOutlineUserSwitch,
   AiFillLock,
-  //   AiFillEyeInvisible,
+  AiFillEyeInvisible,
   AiFillEye,
 } from "react-icons/ai";
 import Loading from "../../components/layout/Loading";
@@ -28,6 +28,12 @@ function Register() {
     confirm_password: "",
     gender: "",
   });
+
+  const [show, setShow] = useState({
+    pass: false,
+    confirm_Pass: false,
+  });
+
   useEffect(() => {
     console.log(input);
   }, [input]);
@@ -58,6 +64,7 @@ function Register() {
       dispatch(doneLoading());
     }
   };
+
   return (
     <>
       {loading === true ? <Loading /> : ""}
@@ -122,16 +129,28 @@ function Register() {
                     setInput({ ...input, password: e.target.value })
                   }
                   value={input.password}
-                  type="password"
+                  type={show.pass === true ? "text" : "password"}
                   className="input-auth"
                   placeholder="Enter Your Password here"
                   aria-label="Password address"
                   aria-describedby="basic-addon1"
                 />
                 <InputGroup.Text className="input-auth" id="basic-addon1">
-                  <span className="d-flex align-items-center oncursor">
-                    <AiFillEye />
-                  </span>
+                  {show.pass === false ? (
+                    <span
+                      onClick={() => setShow({ ...show, pass: true })}
+                      className="d-flex align-items-center oncursor"
+                    >
+                      <AiFillEye />
+                    </span>
+                  ) : (
+                    <span
+                      onClick={() => setShow({ ...show, pass: false })}
+                      className="d-flex align-items-center oncursor"
+                    >
+                      <AiFillEyeInvisible />
+                    </span>
+                  )}
                 </InputGroup.Text>
               </InputGroup>
               <InputGroup className="mb-3">
@@ -145,16 +164,28 @@ function Register() {
                     setInput({ ...input, confirm_password: e.target.value })
                   }
                   value={input.confirm_password}
-                  type="password"
+                  type={show.confirm_Pass === true ? "text" : "password"}
                   className="input-auth"
                   placeholder="Confirm Your Password here"
                   aria-label="Password address"
                   aria-describedby="basic-addon1"
                 />
                 <InputGroup.Text className="input-auth" id="basic-addon1">
-                  <span className="d-flex align-items-center oncursor">
-                    <AiFillEye />
-                  </span>
+                  {show.confirm_Pass === false ? (
+                    <span
+                      onClick={() => setShow({ ...show, confirm_Pass: true })}
+                      className="d-flex align-items-center oncursor"
+                    >
+                      <AiFillEye />
+                    </span>
+                  ) : (
+                    <span
+                      onClick={() => setShow({ ...show, confirm_Pass: false })}
+                      className="d-flex align-items-center oncursor"
+                    >
+                      <AiFillEyeInvisible />
+                    </span>
+                  )}
                 </InputGroup.Text>
               </InputGroup>
               <InputGroup className="mb-3">

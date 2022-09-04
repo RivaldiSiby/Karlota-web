@@ -10,7 +10,7 @@ const auth = (prevState = initialState, action) => {
     case "REMOVE_AUTH":
       return { login: false, user: [] };
     default:
-      return { login: false, user: [] };
+      return prevState;
   }
 };
 
