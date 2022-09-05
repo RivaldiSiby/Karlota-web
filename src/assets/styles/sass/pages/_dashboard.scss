@@ -1,0 +1,35 @@
+@use "../layout/var";
+
+.wrap-dash {
+  height: auto;
+  min-height: 100vh;
+  background-color: var.$primary1;
+  width: 100%;
+  padding-top: 140px;
+}
+.main-body-dash {
+  width: 100%;
+  height: calc(100vh - 140px);
+  display: grid;
+  //   grid-template-rows: 30% 60%;
+  grid-template-columns: 25% 70%;
+  grid-template-rows: auto auto auto;
+  column-gap: 5%;
+  section {
+    background-color: var.$primary2;
+    margin-bottom: 5vh;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px #a9a3b849;
+  }
+
+  .main-user-info {
+    grid-row: 1/1;
+  }
+  .main-contact-list {
+    grid-row: 2/4;
+  }
+  .main-box-wrap {
+    grid-column: 2/3;
+    grid-row: 1/4;
+  }
+}
