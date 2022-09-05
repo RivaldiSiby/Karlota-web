@@ -8,7 +8,13 @@ function Dashboard() {
   return (
     <>
       <NavbarUser />
-      <div>Dashboard User</div>
+      <main className="wrap-dash">
+        <section className="main-body-dash container">
+          <section className="main-user-info">user</section>
+          <section className="main-box-wrap ">contact</section>
+          <section className="main-contact-list ">content</section>
+        </section>
+      </main>
     </>
   );
 }
