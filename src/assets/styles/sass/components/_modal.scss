@@ -1,0 +1,195 @@
+@use "../layout/var";
+
+.modal-box-wrap {
+  background-color: rgba(0, 0, 0, 0.699);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 20;
+}
+
+.post-modal-box {
+  width: 900px;
+  min-height: 300px;
+  background-color: var.$primary1;
+  .close-btn-modal {
+    min-width: 100%;
+    span {
+      padding: 10px;
+      color: var.$primary2;
+      cursor: pointer;
+    }
+  }
+  .post-user-info {
+    height: 50px;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+    .bullet-status {
+      width: 10px;
+      height: 10px;
+      position: relative;
+      background-color: var.$secondary2;
+      z-index: 2;
+      margin-left: -14px;
+      top: 20px;
+      border: 1px solid var.$primaryText1;
+    }
+    .user-info-post {
+      flex: 1;
+      h5 {
+        font-family: var.$textFont;
+        font-size: 16px;
+        font-weight: 400;
+        color: white;
+        padding-top: 15px;
+      }
+      p {
+        font-family: var.$textFont;
+        font-size: 12px;
+        color: var.$primaryText2;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-shadow: 0.5px var.$primary1;
+      }
+    }
+  }
+  .post-main-wrap {
+    p {
+      font-family: var.$textFont;
+      font-size: 12px;
+      color: white;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: 0.7s;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  .post-main-foot {
+    h5 {
+      font-family: var.$textFont;
+      font-size: 16px;
+      font-weight: 400;
+      color: white;
+      padding-top: 15px;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: 0.7s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .post-comment-box {
+    margin: 0 20px;
+    height: auto;
+    margin-top: 30px;
+    .list-comment-box {
+      width: 100%;
+      min-height: 100px;
+      height: auto;
+      max-height: 200px;
+      margin-bottom: 20px;
+      overflow: auto;
+      &::-webkit-scrollbar {
+        margin: 20px auto;
+        background-color: var.$primary1;
+        border-radius: 15px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #d6dee170;
+        border-radius: 20px;
+        border: 6px solid transparent;
+        background-clip: content-box;
+      }
+      .user-comment-box {
+        margin: 20px 0;
+        min-height: 50px;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+        .start-wrap-comment {
+          p {
+            padding-top: 5px;
+            font-family: var.$textFont;
+            font-size: 12px;
+            color: var.$primaryText2;
+            font-weight: 300;
+            letter-spacing: 1px;
+            text-shadow: 0.5px var.$primary1;
+          }
+        }
+        .bullet-status {
+          width: 10px;
+          height: 10px;
+          position: relative;
+          background-color: var.$secondary2;
+          z-index: 2;
+          margin-left: -14px;
+          top: 38px;
+          border: 1px solid var.$primaryText1;
+        }
+        .user-info-post {
+          background-color: var.$primary2;
+          margin-left: 20px;
+          border-radius: 10px;
+          flex: 1;
+          h5 {
+            font-family: var.$textFont;
+            font-size: 16px;
+            font-weight: 400;
+            color: white;
+            padding-top: 15px;
+          }
+          p {
+            font-family: var.$textFont;
+            font-size: 13px;
+            color: white;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-shadow: 0.5px var.$primary1;
+          }
+        }
+      }
+    }
+    .add-comment-box {
+      width: 100%;
+      height: 50px;
+      border-radius: 10px;
+      background-color: white;
+      align-items: center;
+      textarea {
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+        flex: 1;
+        resize: none;
+        border: none;
+        height: 40px;
+        font-family: var.$textFont;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 7.5px 10px;
+        color: var.$primaryText1;
+        &:focus {
+          outline-color: white;
+        }
+      }
+      button {
+        margin: 5px 5px;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: var.$secondary2;
+        color: white;
+      }
+    }
+  }
+}
