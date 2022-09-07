@@ -3,6 +3,10 @@
 
 // layout
 @use "./layout/layout";
+
+// components
+@use "./components/modal";
+
 //page
 @use "./pages/home";
 @use "./pages/auth";

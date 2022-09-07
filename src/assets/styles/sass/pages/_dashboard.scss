@@ -18,7 +18,7 @@
   div {
     background-color: var.$primary2;
     margin-bottom: 5vh;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 2px 2px 2px #a9a3b849;
   }
 
@@ -33,6 +33,7 @@
     }
     .profile-user {
       grid-column: 1/2;
+      max-height: 120px;
       .img-profile-user {
         width: 50px;
         height: 50px;
@@ -66,13 +67,178 @@
     .profile-desc {
       grid-column: 1/3;
       grid-row: 2/4;
+      h4 {
+        // background-color: var.$primary1;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-family: var.$headerFont;
+        cursor: pointer;
+        span {
+          margin-left: 10px;
+          font-size: 18px;
+        }
+      }
     }
   }
   .main-contact-list {
     grid-row: 2/4;
+    min-height: calc(100vh - 250px - 120px);
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      margin: 20px auto;
+      background-color: var.$primary2;
+      border-radius: 15px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #d6dee170;
+      border-radius: 20px;
+      border: 6px solid transparent;
+      background-clip: content-box;
+    }
+    .contact-user-box {
+      height: 75px;
+      max-height: 75px;
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      .bullet-status {
+        width: 10px;
+        height: 10px;
+        position: relative;
+        background-color: var.$secondary2;
+        z-index: 2;
+        margin-left: -12px;
+        top: 15px;
+        border: 1px solid var.$primaryText1;
+      }
+      .contact-user-info {
+        flex: 5;
+        border-bottom: 1px solid #736b8bf8;
+        height: 75px;
+        max-height: 75px;
+        h5 {
+          font-family: var.$textFont;
+          font-size: 16px;
+          font-weight: 400;
+          color: white;
+          padding-top: 15px;
+        }
+        p {
+          font-family: var.$textFont;
+          font-size: 12px;
+          color: var.$primaryText2;
+          font-weight: 500;
+          letter-spacing: 1px;
+          text-shadow: 0.5px var.$primary1;
+        }
+      }
+      .contact-user-end {
+        flex: 1;
+        border-bottom: 1px solid #736b8bf8;
+        height: 100%;
+        p {
+          font-family: var.$textFont;
+          font-size: 13px;
+          font-weight: 400;
+          color: white;
+        }
+      }
+    }
   }
   .main-box-wrap {
     grid-column: 2/3;
     grid-row: 1/4;
+    background-color: var.$primary1;
+    box-shadow: none;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      margin: 20px auto;
+      background-color: var.$primary1;
+      border-radius: 15px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #d6dee170;
+      border-radius: 20px;
+      border: 6px solid transparent;
+      background-clip: content-box;
+    }
+    .wrap-post-box {
+      width: 85%;
+      min-height: 100px;
+      height: auto;
+      // background-color: var.$primary3;
+      margin-bottom: 120px;
+      .post-user-info {
+        height: 50px;
+        img {
+          width: 50px;
+          height: 50px;
+        }
+        .bullet-status {
+          width: 10px;
+          height: 10px;
+          position: relative;
+          background-color: var.$secondary2;
+          z-index: 2;
+          margin-left: -14px;
+          top: 20px;
+          border: 1px solid var.$primaryText1;
+        }
+        .user-info-post {
+          flex: 1;
+          h5 {
+            font-family: var.$textFont;
+            font-size: 16px;
+            font-weight: 400;
+            color: white;
+            padding-top: 15px;
+          }
+          p {
+            font-family: var.$textFont;
+            font-size: 12px;
+            color: var.$primaryText2;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-shadow: 0.5px var.$primary1;
+          }
+        }
+      }
+      .post-main-wrap {
+        p {
+          font-family: var.$textFont;
+          font-size: 12px;
+          color: white;
+          letter-spacing: 1px;
+          cursor: pointer;
+          transition: 0.7s;
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+      }
+      .post-main-foot {
+        h5 {
+          font-family: var.$textFont;
+          font-size: 16px;
+          font-weight: 400;
+          color: white;
+          padding-top: 15px;
+          margin-right: 10px;
+          cursor: pointer;
+          transition: 0.7s;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
   }
 }
